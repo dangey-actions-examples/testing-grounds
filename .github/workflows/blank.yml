@@ -1,0 +1,17 @@
+name: Execute standard blank run
+
+on:
+  workflow_call:
+    inputs:
+      duration:
+        description: 'How long in seconds should the job execute?'
+        default: 5
+        required: false
+        type: number
+
+jobs:
+  job-name:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep ${{ inputs.sleep-duration }}
+      
