@@ -5,18 +5,22 @@ on:
     inputs:
       duration:
         description: 'How long in seconds should the job execute?'
-        type: string
-        default: '5'
+        type: number
+        default: 5
   workflow_call:
     inputs:
       duration:
         description: 'How long in seconds should the job execute?'
-        type: string
-        default: '5'
+        type: number
+        default: 5
 
 jobs:
   job-name:
     runs-on: ubuntu-latest
     steps:
-      - run: sleep ${{ inputs.duration }}
+      - run: |
+          for x in {1..${{ inputs.duration }}}
+          do 
+            echo "Sleeping count: $x"
+          done 
       
