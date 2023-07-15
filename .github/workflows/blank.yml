@@ -7,6 +7,12 @@ on:
         description: 'How long in seconds should the job execute?'
         type: number
         default: '5'
+  workflow_call:
+    inputs:
+      duration:
+        description: 'How long in seconds should the job execute?'
+        type: number
+        default: 5
 
 jobs:
   job-name:
