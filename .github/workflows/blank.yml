@@ -22,6 +22,6 @@ jobs:
           for x in {1..${{ inputs.duration }}}
           do 
             echo "Sleeping count: $x"
-            sleep $x
+            sleep 1
           done 
       
