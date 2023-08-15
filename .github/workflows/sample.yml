@@ -1,0 +1,15 @@
+name: Various Steps Sample
+
+on:
+  workflow_dispatch:
+
+jobs:
+  jobA:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v1
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
