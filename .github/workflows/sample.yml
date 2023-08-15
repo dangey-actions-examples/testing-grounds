@@ -1,4 +1,4 @@
-name: Various Steps Sample
+name: Various steps sample
 
 on:
   workflow_dispatch:
