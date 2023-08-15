@@ -2,6 +2,7 @@ name: Various steps sample
 
 on:
   workflow_dispatch:
+  workflow_call:
 
 jobs:
   jobA:
